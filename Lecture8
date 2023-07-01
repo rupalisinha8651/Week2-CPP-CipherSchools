@@ -1,0 +1,23 @@
+#include <iostream>
+
+// Class definition
+class MyClass {
+public:
+    int myInt; // Data member
+
+    void myMethod() { // Member function
+        std::cout << "Hello from myMethod!" << std::endl;
+    }
+};
+
+int main() {
+    // Create an object of MyClass
+    MyClass myObject;
+
+    // Accessing the data member and calling the member function
+    myObject.myInt = 42;
+    std::cout << "myInt: " << myObject.myInt << std::endl;
+    myObject.myMethod();
+
+    return 0;
+}
