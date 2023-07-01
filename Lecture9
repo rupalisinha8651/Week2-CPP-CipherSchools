@@ -1,0 +1,32 @@
+#include <iostream>
+
+// Forward declaration of MyClassB
+class MyClassB;
+
+// MyClassA declaration
+class MyClassA {
+private:
+    int privateData;
+
+public:
+    MyClassA(int data) : privateData(data) {}
+
+    friend class MyClassB; // Declaration of MyClassB as a friend class
+};
+
+// MyClassB definition
+class MyClassB {
+public:
+    void displayData(const MyClassA& obj) {
+        std::cout << "MyClassB: Accessing privateData from MyClassA: " << obj.privateData << std::endl;
+    }
+};
+
+int main() {
+    MyClassA objA(42);
+    MyClassB objB;
+
+    objB.displayData(objA);
+
+    return 0;
+}
