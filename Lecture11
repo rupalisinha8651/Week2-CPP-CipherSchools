@@ -1,0 +1,36 @@
+#include <iostream>
+
+class MyClass {
+private:
+    int myInt;
+    char myChar;
+
+public:
+    // Default constructor
+    MyClass() {
+        myInt = 0;
+        myChar = ' ';
+    }
+
+    // Parameterized constructor
+    MyClass(int num, char ch) {
+        myInt = num;
+        myChar = ch;
+    }
+
+    void displayData() {
+        std::cout << "myInt: " << myInt << ", myChar: " << myChar << std::endl;
+    }
+};
+
+int main() {
+    // Create objects using constructors
+    MyClass obj1; // Default constructor
+    MyClass obj2(42, 'A'); // Parameterized constructor
+
+    // Call member function to display data
+    obj1.displayData();
+    obj2.displayData();
+
+    return 0;
+}
